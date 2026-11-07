@@ -1,0 +1,8 @@
+
+Running 1 test using 1 worker
+
+(node:88348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 e2e/secret-santa.spec.ts:351:5 › confirm early draw, privately reveal, continue and revisit (5.8s)
+
+  1 passed (6.6s)

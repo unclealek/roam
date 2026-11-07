@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Roam",
+    "slug": "roam-social-games",
+    "scheme": "roam",
+    "version": "0.1.1",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-status-bar",
+      "expo-web-browser",
+      "expo-apple-authentication",
+      "expo-notifications",
+      "@react-native-community/datetimepicker"
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "ios": {
+      "bundleIdentifier": "com.moredata.roam",
+      "usesAppleSignIn": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "buildNumber": "10"
+    },
+    "icon": "./assets/icon.png",
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "65b2d707-2654-4a12-b609-2fee9c9a0a07"
+      }
+    },
+    "owner": "alekille",
+    "android": {
+      "package": "com.moredata.roam"
+    }
+  }
+}

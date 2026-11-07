@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-05",
+  "source_sha256": {
+    "src/presentation/ui.tsx": "439fa3f8b93051f002e696d34a7cc0b6cf8d10452ec9c937ae4d2981bbf91f97",
+    "src/platform/sessions/useAccountResource.ts": "494331e32dde64db603ca8ef71d4ad76c9742ca0dcab267447cac150e707cbd9",
+    "src/presentation/profile/ProfileScreens.tsx": "4e0b9b8162a0023d9880c69e1b5e412051df70225af3d3ef186a9784168f72ba",
+    "src/presentation/secret-santa/SantaScreens.tsx": "a93147cf46e91e760331e4cf317ab673a3276496c3146f6c3ecf9347f26f9163",
+    "tests/account-resource.test.tsx": "ed3d6d08fe0556a177ceeaf4a1fbbd982aaebc45b634921be5568d82c4b70352",
+    "tests/legacy-ui.test.tsx": "c53d13c62502fca7aada53a7a11cccb1a02f319e4443b6220556721891df379d",
+    "tests/secret-santa-screens.test.tsx": "3b2857e42b3d01dd11a4b30c0b0408e8322da114bbf170087ac8eab55ac4691e",
+    "tests/profile-phase2.test.tsx": "2f4d3d3c3076118622cbd491e54e62cb084044e680986ca7c8cbc8dfc7f2eba5",
+    "e2e/final-validation.spec.ts": "6b8691a2fa025d50d88252c3960ff9149df5ebd85c744f0922a1129c9afffe43",
+    "e2e/button-audit.spec.ts": "d3cadd21d8fb256e16e83bf444a7f85f9e19209308908006910fc037f62da19a",
+    "e2e/rewards.spec.ts": "e9331943523e58839e4dd986b74be14bd30f2e326195554191802c30e1da703c",
+    "e2e/secret-santa.spec.ts": "f8638c695e65f54d15b45e5e3094858170850b0d6f56141ae62de5150d5ae0b0",
+    "e2e/fixtures/button-audit-backend.cjs": "0223344eaa6e1484e0e3f0a0ca922591a67d6407cdcc9625afa04be0c6d25bff"
+  },
+  "checks": {
+    "unit_component_local_database": "325 passed",
+    "coverage": {
+      "statements": 95.5,
+      "branches": 92.01,
+      "functions": 94.32,
+      "lines": 97.36
+    },
+    "browser_full": "59 passed",
+    "browser_reviewed": "9 passed",
+    "screenshot_followup": "1 passed",
+    "native_compile": "Debug simulator build succeeded; artifact not installed",
+    "physical_device": "NOT TESTED",
+    "android_runtime": "NOT TESTED",
+    "expo_doctor": "FAIL: 18/20"
+  },
+  "release_ready": false
+}

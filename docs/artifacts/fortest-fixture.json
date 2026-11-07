@@ -1,0 +1,60 @@
+{
+  "project": "ywpmvqgtiawtkcqxeehf",
+  "group_id": "a3016620-e44c-4cab-823c-ce1ca46b2590",
+  "session_id": "f0fb17f3-5e59-4a63-9d2f-73a6bd1ea1a4",
+  "owner_id": "b461fe02-c15f-47b6-b6c8-8f6b47e4b81a",
+  "users": [
+    {
+      "id": "2cc21fa0-9fa8-4cb8-80a9-2759d0a0a399",
+      "display_name": "ForTest Player 01"
+    },
+    {
+      "id": "cfb85b7c-8aea-4b97-8de4-7bc42a9e9cde",
+      "display_name": "ForTest Player 02"
+    },
+    {
+      "id": "58db242d-ae87-4a82-bf11-1b9f388943dd",
+      "display_name": "ForTest Player 03"
+    },
+    {
+      "id": "bd54448e-6c3a-462f-a0e4-c2cb7e8e2a49",
+      "display_name": "ForTest Player 04"
+    },
+    {
+      "id": "b1944ce7-fa88-4dc6-9983-093993564e5d",
+      "display_name": "ForTest Player 05"
+    },
+    {
+      "id": "4dc39af3-532d-45d3-8d3d-daf5608257f0",
+      "display_name": "ForTest Player 06"
+    },
+    {
+      "id": "9ac1f143-8364-4fef-b080-6419b7f22676",
+      "display_name": "ForTest Player 07"
+    }
+  ],
+  "checks": [
+    "ForTest contains Kelvin as owner and seven dummy members",
+    "Test Secret Santa lobby has eight participants and an unstarted draw",
+    "All seven live authenticated dummy accounts can load rewards and notifications; cards remain correctly locked at zero XP",
+    "Live notification preferences save and restore correctly",
+    "Client cannot grant itself unearned XP",
+    "Reward data remains isolated across accounts",
+    "Eight real lifecycle notices (created + seven joins) use the correct session link",
+    "Owner notification mark-read and mark-unread work; verification transaction rolled back",
+    "Owner reward dashboard loads through authenticated RPC"
+  ],
+  "created_at": "2026-11-05T06:18:51.743Z",
+  "host_notification_count": 9,
+  "final": {
+    "assignments": 0,
+    "members": 8,
+    "participants": 8
+  },
+  "notification_delivery": [
+    {
+      "count": 9,
+      "status": "cancelled"
+    }
+  ]
+}

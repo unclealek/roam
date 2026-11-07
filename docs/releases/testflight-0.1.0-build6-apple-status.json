@@ -1,0 +1,11 @@
+{
+  "id": "f6351da6-7c49-4f78-8b52-6fab02e3357c",
+  "build": "6",
+  "processing": "VALID",
+  "uploaded": "2026-11-04T11:24:14-08:00",
+  "beta": {
+    "autoNotifyEnabled": true,
+    "internalBuildState": "IN_BETA_TESTING",
+    "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+  }
+}

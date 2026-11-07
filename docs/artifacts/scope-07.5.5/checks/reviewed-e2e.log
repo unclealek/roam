@@ -1,0 +1,18 @@
+
+Running 9 tests using 2 workers
+
+(node:88236) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:88237) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 e2e/secret-santa.spec.ts:228:5 › create standalone Secret Santa, edit settings, close insufficient, extend, and cancel (3.6s)
+  ✓  3 e2e/secret-santa.spec.ts:305:5 › select a persistent group and use safe invitation preview with explicit confirmation (3.6s)
+  ✓  4 e2e/secret-santa.spec.ts:335:5 › Secret Santa setup, join and lobby routes require authentication (3.4s)
+  ✓  2 e2e/final-validation.spec.ts:35:7 › final screen inventory light small layout (14.7s)
+  ✓  5 e2e/secret-santa.spec.ts:351:5 › confirm early draw, privately reveal, continue and revisit (5.7s)
+  ✓  6 e2e/final-validation.spec.ts:97:7 › onboarding and sign-in light (1.8s)
+  ✓  7 e2e/secret-santa.spec.ts:460:5 › introduction and setup fit small dark screens with reduced motion (1.8s)
+  ✓  8 e2e/final-validation.spec.ts:35:7 › final screen inventory dark small layout (14.6s)
+  ✓  9 e2e/final-validation.spec.ts:97:7 › onboarding and sign-in dark (1.8s)
+
+  9 passed (33.8s)

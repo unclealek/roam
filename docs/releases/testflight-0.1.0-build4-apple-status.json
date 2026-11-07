@@ -1,0 +1,28 @@
+{
+  "ios": {
+    "ascAppIdentifier": "6827296384",
+    "testFlightBuilds": [
+      {
+        "appVersion": "0.1.0",
+        "buildNumber": "3",
+        "processingState": "VALID",
+        "internalState": "IN_BETA_TESTING",
+        "externalState": "READY_FOR_BETA_SUBMISSION",
+        "uploadedDate": "2026-10-29T03:01:18-07:00",
+        "expired": false
+      },
+      {
+        "appVersion": "0.1.0",
+        "buildNumber": "2",
+        "processingState": "VALID",
+        "internalState": "IN_BETA_TESTING",
+        "externalState": "READY_FOR_BETA_SUBMISSION",
+        "uploadedDate": "2026-10-28T06:09:58-07:00",
+        "expired": false,
+        "easSubmissionId": "95ef7825-7f8d-4e71-b59e-432e01e15d6d",
+        "easBuildId": "21df29d0-a533-4c2c-bd57-345e26c225c5",
+        "fingerprintHash": "f180b1509a23551ba9bdc6de4576f4913efa021a"
+      }
+    ]
+  }
+}

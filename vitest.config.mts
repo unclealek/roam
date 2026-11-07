@@ -1,0 +1,43 @@
+import { defineConfig } from "vitest/config";
+export default defineConfig({
+  resolve: {
+    alias: [{ find: /^react-native$/, replacement: "react-native-web" }],
+  },
+  test: {
+    include: ["tests/**/*.test.{ts,tsx}"],
+    coverage: {
+      provider: "v8",
+      include: [
+        "src/platform/rewards/service.ts",
+        "src/platform/rewards/presentation.ts",
+        "src/platform/rewards/acknowledgments.ts",
+        "supabase/functions/_shared/rewards.ts",
+        "src/platform/notifications/service.ts",
+        "src/platform/notifications/routes.ts",
+        "src/platform/notifications/presentation.ts",
+        "src/presentation/brand/feedback-policy.ts",
+        "src/platform/notifications/device.native.ts",
+        "src/platform/activities/service.ts",
+        "supabase/functions/notification-dispatcher/activities.ts",
+        "supabase/functions/notification-dispatcher/dispatcher.ts",
+        "supabase/functions/notification-dispatcher/auth.ts",
+        "src/platform/auth/operations.ts",
+        "src/platform/auth/storage.ts",
+        "src/platform/auth/sign-in.ts",
+        "src/platform/auth/AuthProvider.tsx",
+        "src/platform/profiles/validation.ts",
+        "src/platform/profiles/service.ts",
+        "src/platform/groups/service.ts",
+        "src/platform/games/registry.ts",
+        "src/platform/games/configuration.ts",
+        "src/platform/games/service.ts",
+        "src/games/secret-santa/*.ts",
+        "src/platform/sessions/service.ts",
+        "src/platform/sessions/permissions.ts",
+        "src/platform/sessions/validation.ts",
+        "src/platform/sessions/useAccountResource.ts",
+      ],
+      thresholds: { lines: 80, statements: 80, functions: 80, branches: 80 },
+    },
+  },
+});

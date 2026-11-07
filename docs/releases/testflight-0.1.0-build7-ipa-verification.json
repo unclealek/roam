@@ -1,0 +1,16 @@
+{
+  "bundle_id": "com.moredata.roam",
+  "version": "0.1.0",
+  "build": "7",
+  "minimum_ios": "16.4",
+  "production_apns": true,
+  "apple_signin": true,
+  "beta_reports": true,
+  "debugging_disabled": true,
+  "no_device_restriction": true,
+  "roam_backend_in_bundle": true,
+  "codesign_verified": true,
+  "profile_expires": "2027-10-09T17:32:13Z",
+  "ipa_bytes": 18059345,
+  "ipa_sha256": "fb735f38d9cbe000306666e0434550a972f9f7a5bd1427374ccedeafc7f7ad61"
+}

@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-10-29T10:03:42.656Z",
+  "submissionId": "811ff809-d1f0-4c3a-8dc4-9a520d3ca3fb",
+  "submissionStatus": "FINISHED",
+  "ascAppId": "6827296384",
+  "build": {
+    "appVersion": "0.1.0",
+    "buildNumber": "3",
+    "processingState": "VALID",
+    "internalState": "IN_BETA_TESTING",
+    "externalState": "READY_FOR_BETA_SUBMISSION",
+    "uploadedDate": "2026-10-29T03:01:18-07:00",
+    "expired": false
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "run": "8c644d2a-3a4a-48ed-af3d-b5658e86021f",
+  "project": "ywpmvqgtiawtkcqxeehf",
+  "started_at": "2026-10-29T10:54:27.013Z",
+  "tests": [
+    "13 disposable accounts authenticated with real live Auth sessions",
+    "Persistent group invitation redeemed by all 13 participants",
+    "Non-host early draw denied",
+    "Concurrent host draws converge; generic start, forged giver, anonymous and direct assignment reads are denied; membership locked",
+    "Early draw: all 13 form one cycle, privately reveal and revisit; exactly 13 safe ready alerts",
+    "Existing live minute Cron closed joining and automatically matched all 13 without a manual scheduler call",
+    "Automatic draw replay preserves timestamp and does not duplicate notifications",
+    "Hosted cleanup verified: zero fixture accounts, auth sessions, profiles, memberships, notifications, identity refs, games, assignments, activities or groups"
+  ],
+  "sessions": [
+    {
+      "id": "be6112d8-e51c-4c37-a351-e475f0377fa5",
+      "assignments": 13,
+      "exchange_date": "2026-11-12",
+      "exchange_timezone": "Europe/Helsinki",
+      "gameplay_activities": 0,
+      "joining_closed_at": "2026-10-29 10:54:37.258575+00",
+      "joining_deadline": "2026-10-29 11:14:35.822+00",
+      "lobby_phase": "matched",
+      "matched_at": "2026-10-29 10:54:37.279958+00",
+      "ready_notifications": 13,
+      "status": "active"
+    },
+    {
+      "id": "cec76346-498e-4566-aaf3-404126a7e57b",
+      "assignments": 13,
+      "exchange_date": "2026-11-12",
+      "exchange_timezone": "Europe/Helsinki",
+      "gameplay_activities": 0,
+      "joining_closed_at": "2026-10-29 10:56:00.106891+00",
+      "joining_deadline": "2026-10-29 10:55:27.947+00",
+      "lobby_phase": "matched",
+      "matched_at": "2026-10-29 10:57:00.041886+00",
+      "ready_notifications": 13,
+      "status": "active"
+    }
+  ],
+  "cleanup": {
+    "account_refs": 0,
+    "activities": 0,
+    "assignments": 0,
+    "auth_sessions": 0,
+    "auth_users": 0,
+    "game_sessions": 0,
+    "groups": 0,
+    "memberships": 0,
+    "notifications": 0,
+    "profiles": 0
+  },
+  "cron": [
+    {
+      "end_time": "2026-10-29 10:56:00.145734+00",
+      "runid": 4890,
+      "start_time": "2026-10-29 10:56:00.093843+00",
+      "status": "succeeded"
+    },
+    {
+      "end_time": "2026-10-29 10:57:00.105566+00",
+      "runid": 4892,
+      "start_time": "2026-10-29 10:57:00.026267+00",
+      "status": "succeeded"
+    }
+  ],
+  "finished_at": "2026-10-29T10:57:13.270Z",
+  "success": true
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "f6351da6-7c49-4f78-8b52-6fab02e3357c",
+    "build": "6",
+    "processing": "VALID",
+    "uploaded": "2026-11-04T11:24:14-08:00",
+    "beta": {
+      "autoNotifyEnabled": true,
+      "internalBuildState": "IN_BETA_TESTING",
+      "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+    }
+  },
+  {
+    "id": "f4198c5c-09fb-4318-9a2a-d9f07cffd210",
+    "build": "5",
+    "processing": "VALID",
+    "uploaded": "2026-11-04T05:31:26-08:00",
+    "beta": {
+      "autoNotifyEnabled": false,
+      "internalBuildState": "IN_BETA_TESTING",
+      "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+    }
+  },
+  {
+    "id": "cdf6d284-1b5a-433c-848d-22a9a6e705a2",
+    "build": "4",
+    "processing": "VALID",
+    "uploaded": "2026-10-29T11:25:59-07:00",
+    "beta": {
+      "autoNotifyEnabled": true,
+      "internalBuildState": "IN_BETA_TESTING",
+      "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+    }
+  },
+  {
+    "id": "3a21e4c7-c98e-4591-95fb-aaffd9f49178",
+    "build": "3",
+    "processing": "VALID",
+    "uploaded": "2026-10-29T03:01:18-07:00",
+    "beta": {
+      "autoNotifyEnabled": true,
+      "internalBuildState": "IN_BETA_TESTING",
+      "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+    }
+  },
+  {
+    "id": "36c13190-b992-4d44-8221-67fae592e58e",
+    "build": "2",
+    "processing": "VALID",
+    "uploaded": "2026-10-28T06:09:58-07:00",
+    "beta": {
+      "autoNotifyEnabled": true,
+      "internalBuildState": "IN_BETA_TESTING",
+      "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+    }
+  }
+]

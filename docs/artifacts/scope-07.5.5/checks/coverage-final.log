@@ -1,0 +1,52 @@
+
+> roam@0.1.0 test:coverage
+> vitest run --coverage --maxWorkers=1
+
+
+ RUN  v5.0.5 /Users/kelvin/Documents/ChatGPT/Roam
+      Coverage enabled with v8
+
+
+ Test Files  43 passed (43)
+      Tests  325 passed (325)
+   Start at  14:21:56
+   Duration  28.27s (tests 65%, environment 17%, import 15%, worker 2%, transform 1%)
+
+    Isolate  43 workers spawned · ~230ms startup each (spawn + environment, per file)
+             at least ~9.67s faster with isolate: false — reuses workers across files instead of one per file
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |    95.5 |    92.01 |   94.32 |   97.36 |                   
+ ...s/secret-santa |   93.93 |       90 |   96.15 |   95.31 |                   
+  config.ts        |   90.62 |    87.23 |     100 |   93.33 | 21,97             
+  service.ts       |   96.42 |    94.73 |      95 |   96.42 | 101               
+ src/platform/auth |   92.85 |    87.35 |   88.57 |   96.52 |                   
+  AuthProvider.tsx |   88.46 |    71.87 |   85.71 |   94.02 | 98,118-120        
+  storage.ts       |   93.33 |    88.88 |   85.71 |   97.22 | 21                
+ ...platform/games |     100 |    97.72 |     100 |     100 |                   
+  service.ts       |     100 |       90 |     100 |     100 | 28                
+ ...latform/groups |   98.64 |    97.72 |   95.23 |   98.63 |                   
+  service.ts       |   98.64 |    97.72 |   95.23 |   98.63 | 230               
+ .../notifications |   93.75 |    88.63 |   96.42 |   97.97 |                   
+  device.native.ts |   91.22 |    86.04 |   91.66 |   96.22 | 23-24             
+  routes.ts        |    91.3 |    87.09 |     100 |     100 | 20-21,35,41       
+ ...atform/rewards |     100 |    98.55 |   94.73 |     100 |                   
+  ...wledgments.ts |     100 |    97.82 |   83.33 |     100 | 68                
+ ...tform/sessions |   94.87 |    91.17 |   91.66 |   94.52 |                   
+  service.ts       |   92.85 |    93.33 |    92.3 |   92.85 | 52,110            
+  ...ntResource.ts |     100 |     87.5 |     100 |     100 | 74-80             
+  validation.ts    |   89.47 |    88.57 |   77.77 |   89.47 | 56-58             
+ ...ion-dispatcher |   94.11 |    83.01 |     100 |   96.66 |                   
+  auth.ts          |   94.44 |    94.73 |     100 |     100 | 17                
+  dispatcher.ts    |    92.3 |    69.23 |     100 |   94.44 | 49,100            
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 95.5% ( 680/712 )
+Branches     : 92.01% ( 576/626 )
+Functions    : 94.32% ( 183/194 )
+Lines        : 97.36% ( 629/646 )
+================================================================================

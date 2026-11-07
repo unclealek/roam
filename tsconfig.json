@@ -1,0 +1,14 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true
+  },
+  "exclude": [
+    "node_modules",
+    "supabase/functions",
+    "coverage",
+    "dist",
+    "playwright-report",
+    "test-results"
+  ]
+}

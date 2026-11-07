@@ -1,0 +1,20 @@
+node_modules/
+.expo/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+.serena/
+.supabase/
+supabase/.temp/
+playwright-report/
+test-results/
+
+# Native notification credentials and Firebase build configuration
+google-services.json
+GoogleService-Info.plist
+*.p8
+*.p12
+
+.release-artifacts/
