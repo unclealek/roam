@@ -36,7 +36,7 @@ export function AdventureCard({
           >
             Your next adventure starts here.
           </Text>
-          <RoamMascot size={92} placement="small" />
+          <RoamMascot size={92} placement="adventure" />
         </View>
         <View
           style={{

@@ -155,7 +155,7 @@ export default function Welcome() {
               paddingVertical: 24,
             }}
           >
-            <RoamMascot size={240} />
+            <RoamMascot size={240} placement="peek" />
           </View>
           <View
             style={{

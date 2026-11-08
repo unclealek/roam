@@ -50,6 +50,6 @@ Install this exact build from TestFlight and check authentication callbacks, gro
 - No mobile code or binary change; the installed TestFlight build can retry immediately. Full Google sign-in after the repair still requires the user to retry on the physical device.
 - Configuration evidence: `artifacts/google-provider-configured.png` (secret masked).
 
-## Current release — 7 November 2026
+## Current candidate — 7 November 2026
 
-[Roam 0.1.0 (8)](releases/testflight-0.1.0-build8.md) is confirmed **VALID / IN_BETA_TESTING** for internal device testing. The Home design refresh and supplied screen artwork are included. No backend migrations or hosted data cleanup were performed.
+[Roam 0.1.1 (10)](releases/app-store-0.1.1-build10.md) was uploaded to App Store Connect. Apple processing is required before it becomes available in TestFlight. This candidate has not been submitted for App Review or released publicly. The prior verified TestFlight release is [Roam 0.1.0 (8)](releases/testflight-0.1.0-build8.md).

@@ -19,12 +19,14 @@ vi.mock("react-native-safe-area-context", () => ({
   ),
 }));
 afterEach(cleanup);
-it("renders the approved prototype character accessibly without external artwork", () => {
+it("renders the explorer mascot accessibly", () => {
   const { container } = render(
     <RoamMascot size={300} placement="peek" animationState="entrance" />,
   );
   expect(screen.getByTestId("roam-mascot-entrance")).toBeTruthy();
-  expect(container.querySelector("img")).toBeNull();
+  expect(container.querySelector("img")?.getAttribute("src")).toContain(
+    "roam-mascot-explorer.png",
+  );
   expect(screen.getByRole("img", { name: "Roam mascot" })).toBeTruthy();
 });
 it("a disabled provider action cannot trigger authentication", () => {

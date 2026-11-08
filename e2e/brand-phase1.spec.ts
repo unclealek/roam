@@ -74,6 +74,9 @@ for (const appearance of ["light", "dark"] as const) {
           name: "Your next adventure starts here.",
         }),
       ).toBeVisible();
+      await expect(
+        adventureCard.locator('img[src*="roam-mascot-run"]'),
+      ).toHaveJSProperty("complete", true);
       const cloudImage = 'img[src*="home-clouds"]';
       const sessionArtwork = sessionCard.locator(cloudImage);
       await expect(sessionArtwork).toHaveCount(1);
@@ -166,13 +169,31 @@ for (const appearance of ["light", "dark"] as const) {
       page.getByRole("heading", { name: "Roam", exact: true }),
     ).toBeVisible();
     await expect(page.getByTestId("roam-mascot-idle")).toHaveCount(1);
-    await expect(page.locator('img[src*="roam-mascot"]')).toHaveCount(0);
+    await expect(page.locator('img[src*="roam-mascot-wave"]')).toHaveJSProperty(
+      "complete",
+      true,
+    );
     await page.screenshot({
       path: `test-results/phase1-welcome-${appearance}.png`,
       fullPage: true,
     });
     await page.getByRole("button", { name: "Tap anywhere to begin" }).click();
+    await page
+      .getByRole("button", { name: "Get started", exact: true })
+      .click();
+    await expect(
+      page.locator('img[src*="roam-mascot-explorer"]'),
+    ).toHaveJSProperty("complete", true);
+    await page.screenshot({
+      path: `test-results/phase1-onboarding-${appearance}.png`,
+      fullPage: true,
+    });
+    await page.getByRole("button", { name: "Previous screen" }).click();
     await page.getByRole("button", { name: "Sign in" }).click();
+    await expect(page.locator('img[src*="roam-mascot-wave"]')).toHaveJSProperty(
+      "complete",
+      true,
+    );
     await expect(
       page.getByRole("button", { name: "Continue with Google" }),
     ).toBeVisible();
