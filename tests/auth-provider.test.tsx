@@ -136,7 +136,7 @@ describe("persistent session lifecycle", () => {
       </AuthProvider>,
     );
     expect(
-      await screen.findByText(/Unable to restore your session/),
+      await screen.findByText(/Roam couldn’t reopen your saved session/),
     ).toBeTruthy();
   });
 });

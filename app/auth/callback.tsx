@@ -27,7 +27,7 @@ export default function Callback() {
   return (
     <Screen title="Signing in">
       {error ? (
-        <ErrorState message="Sign-in expired or was declined. Please start again." />
+        <ErrorState message="Your Roam sign-in didn’t finish. Go back to sign in and try again." />
       ) : (
         <Loading label="Signing in…" />
       )}

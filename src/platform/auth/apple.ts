@@ -2,13 +2,11 @@ import * as Apple from "expo-apple-authentication";
 import * as Crypto from "expo-crypto";
 import Constants from "expo-constants";
 import { requireSupabase } from "../supabase";
-import { SignInError } from "./errors";
+import { SignInError, signInErrorMessage } from "./errors";
 
 export async function signInWithApple() {
   if (Constants.appOwnership === "expo")
-    throw new SignInError(
-      "You’re running Expo Go, which uses Expo’s app identifier. Install a signed Roam build to sign in with com.moredata.roam.",
-    );
+    throw new SignInError("Open the installed Roam app to sign in with Apple.");
   if (!(await Apple.isAvailableAsync()))
     throw new SignInError("Apple sign-in is not available on this device.");
   const nonce = Crypto.randomUUID();
@@ -31,30 +29,23 @@ export async function signInWithApple() {
     )
       return;
     throw new SignInError(
-      "Apple sign-in could not open. Check that Sign in with Apple is enabled for this app and device.",
+      "Roam couldn’t open Apple sign-in. Try again or choose another sign-in method.",
     );
   }
   if (!credential.identityToken)
     throw new SignInError(
-      "Apple did not return an identity token. Please try again.",
+      "Apple couldn’t finish signing you in. Please try again.",
     );
   const { error } = await requireSupabase().auth.signInWithIdToken({
     provider: "apple",
     token: credential.identityToken,
     nonce,
   });
-  if (error) {
-    const message = error.message.toLowerCase();
-    if (message.includes("audience"))
-      throw new SignInError(
-        "Apple’s app identifier does not match the allowed Supabase Client IDs. Use a signed Roam build configured as com.moredata.roam.",
-      );
-    if (message.includes("nonce"))
-      throw new SignInError(
-        "Apple’s security nonce could not be verified. Close sign-in and try again.",
-      );
+  if (error)
     throw new SignInError(
-      "Supabase could not verify Apple sign-in. Check the Auth logs for this attempt; this does not necessarily mean the Client IDs are wrong.",
+      signInErrorMessage(
+        error,
+        "Roam couldn’t sign you in with Apple. Try again or choose another sign-in method.",
+      ),
     );
-  }
 }

@@ -2,7 +2,11 @@ import { makeRedirectUri } from "expo-auth-session";
 import * as WebBrowser from "expo-web-browser";
 import { Platform } from "react-native";
 import Constants from "expo-constants";
-import { nativeSignInRequirement, SignInError } from "./errors";
+import {
+  nativeSignInRequirement,
+  SignInError,
+  signInErrorMessage,
+} from "./errors";
 import { requireSupabase } from "../supabase";
 import { completeOAuth } from "./operations";
 import { signInWithApple } from "./apple";
@@ -33,7 +37,10 @@ export async function signIn(provider: "apple" | "google") {
   });
   if (error || !data.url)
     throw new SignInError(
-      "Unable to start sign-in. Check the sign-in provider configuration and try again.",
+      signInErrorMessage(
+        error,
+        "Roam couldn’t start sign-in. Try again or choose another sign-in method.",
+      ),
     );
   if (Platform.OS === "web") {
     window.location.assign(data.url);
@@ -50,5 +57,5 @@ export async function signInWithPassword(email: string, password: string) {
   });
   if (error?.code === "invalid_credentials")
     throw new SignInError("Email or password is incorrect.");
-  if (error) throw new SignInError("Unable to sign in. Please try again.");
+  if (error) throw new SignInError(signInErrorMessage(error));
 }

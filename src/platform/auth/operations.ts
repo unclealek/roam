@@ -1,4 +1,4 @@
-import { SignInError } from "./errors";
+import { SignInError, signInErrorMessage } from "./errors";
 type Outcome = { error: unknown };
 export function callbackCode(url: string, redirect: string): string {
   const actual = new URL(url);
@@ -9,7 +9,7 @@ export function callbackCode(url: string, redirect: string): string {
     actual.pathname !== expected.pathname
   ) {
     throw new SignInError(
-      "Unexpected sign-in callback. Check the app’s callback configuration.",
+      "This sign-in link can’t open Roam. Go back to sign in and try again.",
     );
   }
   const code = actual.searchParams.get("code");
@@ -24,7 +24,12 @@ export async function completeOAuth(
 ) {
   const result = await exchange(callbackCode(url, redirect));
   if (result.error)
-    throw new SignInError("Unable to finish sign-in. Please try again.");
+    throw new SignInError(
+      signInErrorMessage(
+        result.error,
+        "Roam couldn’t finish signing you in. Go back to sign in and try again.",
+      ),
+    );
 }
 export async function deleteAccount(
   remove: () => PromiseLike<Outcome>,

@@ -108,7 +108,9 @@ test("both sign-in buttons acknowledge attempts and callback recovery works", as
   await page.goto("/sign-in");
   await button(page, "Continue with Apple").click();
   await expect(
-    page.getByText("Sign-in expired or was declined. Please start again."),
+    page.getByText(
+      "Your Roam sign-in didn’t finish. Go back to sign in and try again.",
+    ),
   ).toBeVisible();
   await button(page, "Back to sign in").click();
   await expect(button(page, "Continue with Google")).toBeEnabled();

@@ -46,7 +46,9 @@ it("does not exchange a token when canceled", async () => {
 });
 it("rejects missing tokens", async () => {
   mock.apple.mockResolvedValue({ identityToken: null });
-  await expect(signInWithApple()).rejects.toThrow("identity token");
+  await expect(signInWithApple()).rejects.toThrow(
+    "Apple couldn’t finish signing you in",
+  );
   expect(mock.token).not.toHaveBeenCalled();
 });
 it("handles unavailable devices", async () => {
@@ -56,7 +58,9 @@ it("handles unavailable devices", async () => {
 });
 it("hides backend errors", async () => {
   mock.token.mockResolvedValue({ error: new Error("secret details") });
-  await expect(signInWithApple()).rejects.toThrow("Client IDs");
+  await expect(signInWithApple()).rejects.toThrow(
+    "Roam couldn’t sign you in with Apple",
+  );
 });
 it("reports audience errors without exposing the backend response", async () => {
   mock.token.mockResolvedValue({
@@ -66,17 +70,21 @@ it("reports audience errors without exposing the backend response", async () => 
       status: 400,
     },
   });
-  await expect(signInWithApple()).rejects.toThrow("app identifier");
+  await expect(signInWithApple()).rejects.toThrow(
+    "Roam couldn’t sign you in with Apple",
+  );
 });
-it("distinguishes nonce validation from client ID configuration", async () => {
+it("asks the player to restart an unverified Apple sign-in", async () => {
   mock.token.mockResolvedValue({
     error: { message: "Nonces mismatch", code: "validation_failed" },
   });
-  await expect(signInWithApple()).rejects.toThrow("security nonce");
+  await expect(signInWithApple()).rejects.toThrow(
+    "Roam couldn’t sign you in with Apple",
+  );
 });
 it("explains Expo Go’s identity before requesting Apple credentials", async () => {
   mock.constants.appOwnership = "expo";
-  await expect(signInWithApple()).rejects.toThrow("Expo Go");
+  await expect(signInWithApple()).rejects.toThrow("installed Roam app");
   expect(mock.apple).not.toHaveBeenCalled();
   expect(mock.token).not.toHaveBeenCalled();
 });

@@ -54,7 +54,7 @@ describe("Apple and Google OAuth transport", () => {
   });
   it("explains the unsupported Expo Go callback before starting OAuth", async () => {
     mock.constants.appOwnership = "expo";
-    await expect(signIn("google")).rejects.toThrow("development build");
+    await expect(signIn("google")).rejects.toThrow("installed Roam app");
     expect(mock.oauth).not.toHaveBeenCalled();
     expect(mock.browser).not.toHaveBeenCalled();
   });
@@ -93,7 +93,9 @@ describe("Apple and Google OAuth transport", () => {
       data: { url: null },
       error: new Error("provider"),
     });
-    await expect(signIn("apple")).rejects.toThrow("Unable to start sign-in");
+    await expect(signIn("apple")).rejects.toThrow(
+      "Roam couldn’t start sign-in",
+    );
   });
   it("reports failed code exchange", async () => {
     mock.browser.mockResolvedValue({
@@ -101,7 +103,9 @@ describe("Apple and Google OAuth transport", () => {
       url: "roam://auth/callback?code=expired",
     });
     mock.exchange.mockResolvedValue({ error: new Error("expired") });
-    await expect(signIn("google")).rejects.toThrow("Unable to finish sign-in");
+    await expect(signIn("google")).rejects.toThrow(
+      "Roam couldn’t finish signing you in",
+    );
   });
   it("redirects the browser on web", async () => {
     mock.platform.OS = "web";

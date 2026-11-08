@@ -9,6 +9,7 @@ import {
 } from "react";
 import { AppState } from "react-native";
 import type { Session } from "@supabase/supabase-js";
+import { sessionRestoreErrorMessage } from "./errors";
 import { supabase } from "../supabase";
 import { loadProfile, type Profile } from "../profiles/service";
 
@@ -83,13 +84,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       .getSession()
       .then(({ data, error: failure }) => {
         if (!active || changed) return;
-        if (failure) setError("Unable to restore your session. Please retry.");
+        if (failure) setError(sessionRestoreErrorMessage(failure));
         else setSession(data.session);
         setLoading(false);
       })
-      .catch(() => {
+      .catch((failure: unknown) => {
         if (active && !changed) {
-          setError("Unable to restore your session. Please retry.");
+          setError(sessionRestoreErrorMessage(failure));
           setLoading(false);
         }
       });
